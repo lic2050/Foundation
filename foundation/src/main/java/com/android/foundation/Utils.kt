@@ -1,11 +1,10 @@
-package com.galaxy.lgbvideo.util
+package com.android.foundation
 
 import android.content.ContentProvider
 import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.net.Uri
-import com.galaxy.lgbvideo.app.ActivityManager
 
 
 object Utils {

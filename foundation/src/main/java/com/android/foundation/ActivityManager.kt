@@ -1,9 +1,7 @@
-package com.galaxy.lgbvideo.app
+package com.android.foundation
 
 import android.app.Activity
 import android.app.Application
-import com.android.foundation.DefaultActivityLifecycleCallbacks
-import com.galaxy.lgbvideo.util.Utils
 import java.lang.ref.WeakReference
 
 
