@@ -19,6 +19,10 @@ fun string(stringId: Int, vararg string: String): String {
 
 
 fun color(colorId: Int): Int {
-    return Utils.uiContext().resources.getColor(colorId)
+    return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        Utils.uiContext().resources.getColor(colorId, null)
+    } else {
+        Utils.uiContext().resources.getColor(colorId)
+    }
 }
 

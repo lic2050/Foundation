@@ -2,9 +2,21 @@
     package="com.android.foundation">
 
     <application>
+<!--        <provider-->
+<!--            android:name=".SupportInitProvider"-->
+<!--            android:authorities="${applicationId}.SupportInitProvider"-->
+<!--            android:exported="false" />-->
+
         <provider
-            android:name=".SupportInitProvider"
-            android:authorities="${applicationId}.SupportInitProvider"
-            android:exported="false" />
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false">
+
+            <!-- 自动初始化 -->
+            <meta-data
+                android:name="com.android.foundation.FoundationInitializer"
+                android:value="androidx.startup" />
+        </provider>
+
     </application>
 </manifest>
