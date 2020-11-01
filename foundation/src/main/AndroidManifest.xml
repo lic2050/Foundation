@@ -2,11 +2,6 @@
     package="com.android.foundation">
 
     <application>
-<!--        <provider-->
-<!--            android:name=".SupportInitProvider"-->
-<!--            android:authorities="${applicationId}.SupportInitProvider"-->
-<!--            android:exported="false" />-->
-
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="${applicationId}.androidx-startup"

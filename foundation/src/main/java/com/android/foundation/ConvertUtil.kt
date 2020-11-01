@@ -1,34 +1,34 @@
 package com.android.foundation
 
-fun String?.safeToInt(): Int {
+fun String?.safeToInt(defaultValue: Int = 0): Int {
     return try {
-        this?.toInt() ?: 0
+        this?.toInt() ?: defaultValue
     } catch (e: NumberFormatException) {
-        0
+        defaultValue
     }
 }
 
-fun String?.safeToLong(): Long {
+fun String?.safeToLong(defaultValue: Long = 0): Long {
     return try {
-        this?.toLong() ?: 0L
+        this?.toLong() ?: defaultValue
     } catch (e: NumberFormatException) {
-        0
+        defaultValue
     }
 }
 
-fun String?.safeToFloat(): Float {
+fun String?.safeToFloat(defaultValue: Float = 0F): Float {
     return try {
-        this?.toFloat() ?: 0F
+        this?.toFloat() ?: defaultValue
     } catch (e: NumberFormatException) {
-        0f
+        defaultValue
     }
 }
 
-fun String?.safeToDouble(): Double {
+fun String?.safeToDouble(defaultValue: Double = 0.0): Double {
     return try {
-        this?.toDouble() ?: 0.0
+        this?.toDouble() ?: defaultValue
     } catch (e: NumberFormatException) {
-        0.0
+        defaultValue
     }
 }
 
@@ -40,34 +40,34 @@ fun Int?.toBoolean(): Boolean {
     return this == 1
 }
 
-fun Int?.safeToString(): String {
+fun Int?.safeToString(defaultValue: String = ""): String {
     return try {
-        this.toString()
+        this?.toString() ?: defaultValue
     } catch (e: Exception) {
-        ""
+        defaultValue
     }
 }
 
-fun Long?.safeToString(): String {
+fun Long?.safeToString(defaultValue: String = ""): String {
     return try {
-        this.toString()
+        this?.toString() ?: defaultValue
     } catch (e: Exception) {
-        ""
+        defaultValue
     }
 }
 
-fun Float?.safeToString(): String {
+fun Float?.safeToString(defaultValue: String = ""): String {
     return try {
-        this.toString()
+        this?.toString() ?: defaultValue
     } catch (e: Exception) {
-        ""
+        defaultValue
     }
 }
 
-fun Double?.safeToString(): String {
+fun Double?.safeToString(defaultValue: String = ""): String {
     return try {
-        this.toString()
+        this?.toString() ?: defaultValue
     } catch (e: Exception) {
-        ""
+        defaultValue
     }
 }

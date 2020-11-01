@@ -6,9 +6,9 @@ import android.content.Context
 object Utils {
     lateinit var context: Context
 
-    fun uiContext(): Context {
-        return ActivityManager.stackTopActivity() ?: context
-    }
+    val uiContext: Context
+        get() = ActivityManager.stackTopActivity() ?: context
+
 }
 
 

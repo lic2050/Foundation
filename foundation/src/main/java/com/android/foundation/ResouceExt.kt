@@ -6,23 +6,23 @@ import com.android.foundation.Utils
 
 fun drawable(drawable: Int): Drawable {
     return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-        Utils.uiContext().resources.getDrawable(drawable, null)
+        Utils.uiContext.resources.getDrawable(drawable, null)
     } else {
-        Utils.uiContext().resources.getDrawable(drawable)
+        Utils.uiContext.resources.getDrawable(drawable)
     }
 }
 
 
 fun string(stringId: Int, vararg string: String): String {
-    return Utils.uiContext().getString(stringId, string)
+    return Utils.uiContext.getString(stringId, string)
 }
 
 
 fun color(colorId: Int): Int {
     return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-        Utils.uiContext().resources.getColor(colorId, null)
+        Utils.uiContext.resources.getColor(colorId, null)
     } else {
-        Utils.uiContext().resources.getColor(colorId)
+        Utils.uiContext.resources.getColor(colorId)
     }
 }
 
